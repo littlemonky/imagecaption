@@ -96,7 +96,7 @@ def main(unused_argv):
         learning_rate_decay_fn=learning_rate_decay_fn)
 
     # Set up the Saver for saving and restoring model checkpoints.
-    saver = tf.train.Saver(max_to_keep=training_config.max_checkpoints_to_keep,keep_checkpoint_every_n_hours=training_config.keep_checkpoint_every_n_hours)
+    saver = tf.train.Saver(max_to_keep=training_config.max_checkpoints_to_keep)
 
   # Run training.
   tf.contrib.slim.learning.train(
@@ -107,7 +107,9 @@ def main(unused_argv):
       global_step=model.global_step,
       number_of_steps=FLAGS.number_of_steps,
       init_fn=model.init_fn,
-      saver=saver)
+      saver=saver,
+      save_summaries_secs = 5,
+      save_interval_secs = 5)
 
 
 if __name__ == "__main__":
