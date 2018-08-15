@@ -78,8 +78,8 @@ def main(unused_argv):
 
         def _learning_rate_decay_fn(learning_rate, global_step):
           return tf.train.exponential_decay(
-              learning_rate,
-              global_step,
+              learning_rate=learning_rate,
+              global_step=global_step,
               decay_steps=decay_steps,
               decay_rate=training_config.learning_rate_decay_factor,
               staircase=True)
