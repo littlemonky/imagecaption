@@ -108,7 +108,7 @@ def main(unused_argv):
       number_of_steps=FLAGS.number_of_steps,
       init_fn=model.init_fn,
       saver=saver,
-      save_summaries_secs = 600,
+      save_summaries_secs = 20,
       save_interval_secs = 20)
 
 
