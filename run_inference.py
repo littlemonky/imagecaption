@@ -31,11 +31,11 @@ from inference_utils import vocabulary
 
 FLAGS = tf.flags.FLAGS
 
-tf.flags.DEFINE_string("checkpoint_path", "",
+tf.flags.DEFINE_string("checkpoint_path", "/output/train",
                        "Model checkpoint file or directory containing a "
                        "model checkpoint file.")
-tf.flags.DEFINE_string("vocab_file", "", "Text file containing the vocabulary.")
-tf.flags.DEFINE_string("input_files", "",
+tf.flags.DEFINE_string("vocab_file", "/data/weixin-42421001/word_counts.txt", "Text file containing the vocabulary.")
+tf.flags.DEFINE_string("input_files", "/data/weixin-42421001/test.jpg",
                        "File pattern or comma-separated list of file patterns "
                        "of image files.")
 
