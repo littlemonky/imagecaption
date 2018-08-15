@@ -31,7 +31,7 @@ from inference_utils import vocabulary
 
 FLAGS = tf.flags.FLAGS
 
-tf.flags.DEFINE_string("checkpoint_path", "/data/weixin-42421001/check",
+tf.flags.DEFINE_string("checkpoint_path", "/output/train",
                        "Model checkpoint file or directory containing a "
                        "model checkpoint file.")
 tf.flags.DEFINE_string("vocab_file", "/data/weixin-42421001/flickr8k/word_counts.txt", "Text file containing the vocabulary.")
